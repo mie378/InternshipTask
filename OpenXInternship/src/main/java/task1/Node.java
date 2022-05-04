@@ -28,23 +28,6 @@ public class Node {
     public int getValue(){
         return this.value;
     }
-    /*
-    Przemyslaw Kociuba
-    Let f(root) be the number of leaves in a tree
-    Therefore, f(root)=f(root.left)+f(root.right)  and f(leaf)=1
-    Complexity: O(n)
-     */
-    public int numOfLeaves(Node root){
-        if(root==null){
-            return 0;
-        }
-        if(root.getLeftNode()==null&&root.getRightNode()==null){
-            return 1;
-        }
-        int numOfLeaves=0;
-        numOfLeaves+=numOfLeaves(root.getLeftNode())+numOfLeaves(root.getRightNode());
-        return numOfLeaves;
-    }
 
 
 
